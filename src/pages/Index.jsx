@@ -27,7 +27,7 @@ const Index = () => {
               { title: "24/7 Support", description: "Our dedicated team is always here to help you succeed." },
             ].map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <CheckCircle className="h-12 w-12 text-purple-600 mb-4" />
+                <CheckCircle className="h-12 w-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
