@@ -1,5 +1,6 @@
-import { LayoutDashboard, Users, Settings, FileText, Shield } from "lucide-react";
+import { LayoutDashboard, Users, Settings, FileText, Shield, CheckSquare } from "lucide-react";
 import Index from "./pages/Index.jsx";
+import Todo from "./pages/Todo.jsx";
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
@@ -34,5 +35,11 @@ export const navItems = [
     to: "/privacy",
     icon: <Shield className="h-4 w-4" />,
     page: <div>Privacy Policy</div>,
+  },
+  {
+    title: "Todo",
+    to: "/todo",
+    icon: <CheckSquare className="h-4 w-4" />,
+    page: <Todo />,
   },
 ];
