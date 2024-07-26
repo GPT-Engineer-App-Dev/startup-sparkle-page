@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, Settings } from "lucide-react";
+import { LayoutDashboard, Users, Settings, FileText, Shield } from "lucide-react";
 import Index from "./pages/Index.jsx";
 
 /**
@@ -22,5 +22,17 @@ export const navItems = [
     to: "/settings",
     icon: <Settings className="h-4 w-4" />,
     page: <div>Settings Page</div>,
+  },
+  {
+    title: "Terms",
+    to: "/terms",
+    icon: <FileText className="h-4 w-4" />,
+    page: <div>Terms and Conditions</div>,
+  },
+  {
+    title: "Privacy",
+    to: "/privacy",
+    icon: <Shield className="h-4 w-4" />,
+    page: <div>Privacy Policy</div>,
   },
 ];
