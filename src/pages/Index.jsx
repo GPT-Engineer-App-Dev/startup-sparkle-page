@@ -33,12 +33,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call-to-Action Section */}
-      <section className="bg-purple-600 text-white py-20">
+      {/* Getting Started Section */}
+      <section className="bg-pink-400 text-gray-800 py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-8">Join thousands of satisfied users and take your productivity to the next level.</p>
-          <Button size="lg" variant="secondary">
+          <Button size="lg" variant="secondary" className="bg-white hover:bg-gray-100 text-pink-600">
             Sign Up Now <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
