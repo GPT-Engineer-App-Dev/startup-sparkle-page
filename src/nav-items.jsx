@@ -1,4 +1,4 @@
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, Users, Settings } from "lucide-react";
 import Index from "./pages/Index.jsx";
 
 /**
@@ -10,5 +10,17 @@ export const navItems = [
     to: "/",
     icon: <LayoutDashboard className="h-4 w-4" />,
     page: <Index />,
+  },
+  {
+    title: "About",
+    to: "/about",
+    icon: <Users className="h-4 w-4" />,
+    page: <div>About Page</div>,
+  },
+  {
+    title: "Settings",
+    to: "/settings",
+    icon: <Settings className="h-4 w-4" />,
+    page: <div>Settings Page</div>,
   },
 ];
