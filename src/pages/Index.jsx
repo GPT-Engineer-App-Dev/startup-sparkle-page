@@ -2,6 +2,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
+const customerLogos = [
+  { name: "Company A", logo: "/placeholder.svg" },
+  { name: "Company B", logo: "/placeholder.svg" },
+  { name: "Company C", logo: "/placeholder.svg" },
+  { name: "Company D", logo: "/placeholder.svg" },
+  { name: "Company E", logo: "/placeholder.svg" },
+  { name: "Company F", logo: "/placeholder.svg" },
+  { name: "Company G", logo: "/placeholder.svg" },
+  { name: "Company H", logo: "/placeholder.svg" },
+];
+
 const Index = () => {
   return (
     <div className="flex flex-col">
@@ -19,6 +30,20 @@ const Index = () => {
                 <CheckCircle className="h-12 w-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Trusted by Industry Leaders</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {customerLogos.map((customer, index) => (
+              <div key={index} className="flex items-center justify-center">
+                <img src={customer.logo} alt={customer.name} className="h-16 object-contain" />
               </div>
             ))}
           </div>
