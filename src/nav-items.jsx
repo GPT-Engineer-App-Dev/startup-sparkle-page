@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, Settings, FileText, Shield, CheckSquare, Party } from "lucide-react";
+import { LayoutDashboard, Users, Settings, FileText, Shield, CheckSquare } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Todo from "./pages/Todo.jsx";
 import Confetti from "./pages/Confetti.jsx";
@@ -46,7 +46,7 @@ export const navItems = [
   {
     title: "Confetti",
     to: "/confetti",
-    icon: <Party className="h-4 w-4" />,
+    icon: null,
     page: <Confetti />,
   },
 ];
