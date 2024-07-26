@@ -4,13 +4,13 @@ import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const testimonials = [
-  { name: "John Doe", role: "CEO, TechCorp", content: "This platform has transformed the way we work. Highly recommended!" },
-  { name: "Jane Smith", role: "Freelancer", content: "I've tried many tools, but this one stands out. It's a game-changer!" },
-  { name: "Mike Johnson", role: "Project Manager", content: "The features and support are unparalleled. It's been a fantastic experience." },
-  { name: "Sarah Lee", role: "Marketing Director", content: "Our team's productivity has skyrocketed since we started using this platform." },
+  { name: "John Doe", role: "CEO, TechCorp", content: "This platform has transformed the way we work. Highly recommended!", image: "/placeholder.svg" },
+  { name: "Jane Smith", role: "Freelancer", content: "I've tried many tools, but this one stands out. It's a game-changer!", image: "/placeholder.svg" },
+  { name: "Mike Johnson", role: "Project Manager", content: "The features and support are unparalleled. It's been a fantastic experience.", image: "/placeholder.svg" },
+  { name: "Sarah Lee", role: "Marketing Director", content: "Our team's productivity has skyrocketed since we started using this platform.", image: "/placeholder.svg" },
 ];
 
-const TestimonialCarousel = () => {
+const TestimonialCarousel = ({ testimonials }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const scrollPrev = React.useCallback(() => {
@@ -29,15 +29,18 @@ const TestimonialCarousel = () => {
             <div key={index} className="flex-[0_0_100%] min-w-0 pl-4">
               <div className="bg-white p-6 rounded-lg shadow-md m-4">
                 <div className="flex items-center mb-4">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4 object-cover" />
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
               </div>
             </div>
           ))}

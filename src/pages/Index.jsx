@@ -29,7 +29,12 @@ const Index = () => {
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
-          <TestimonialCarousel />
+          <TestimonialCarousel testimonials={[
+            { name: "John Doe", role: "CEO, TechCorp", content: "This platform has transformed the way we work. Highly recommended!", image: "/placeholder.svg" },
+            { name: "Jane Smith", role: "Freelancer", content: "I've tried many tools, but this one stands out. It's a game-changer!", image: "/placeholder.svg" },
+            { name: "Mike Johnson", role: "Project Manager", content: "The features and support are unparalleled. It's been a fantastic experience.", image: "/placeholder.svg" },
+            { name: "Sarah Lee", role: "Marketing Director", content: "Our team's productivity has skyrocketed since we started using this platform.", image: "/placeholder.svg" },
+          ]} />
         </div>
       </section>
 
